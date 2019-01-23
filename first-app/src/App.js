@@ -25,7 +25,7 @@ class App extends Component {
           </a>
         </header>
         <Text></Text>
-        <Button txt="Clique aqui"/>
+        <Button txt="Clique aqui"></Button>
       </div>
     );
   }

@@ -6,16 +6,18 @@ class Button extends React.Component {
       super(props);
       this.state = { x: 0, y: 0 };
       this.props = 'n deu';
+      this.handleClick = this.handleClick.bind(this);
    }
 
-   handleClick() {
+   handleClick(e) {
+      //e.preventDefault();
       console.log('Click happened');
    }
 
    render() {
       return (
          <div>
-         <button onClick={this.handleClick.bind(this)} className="text">{this.props.txt}</button>
+         <button onClick={() => this.handleClick()} className="text">{this.props.txt}</button>
          </div>
       );
    }
