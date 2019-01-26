@@ -19,7 +19,7 @@ class Contador extends React.Component{
 
     btClicked(){
         this.toggleInverted()
-        //this.setState({click:this.state.click+1})
+        this.setState({click:this.state.click+1})
         //var newClass;
         //if(this.state.class == 'text') {
         //    newClass = 'warn' 
