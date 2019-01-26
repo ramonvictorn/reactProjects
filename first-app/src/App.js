@@ -5,6 +5,7 @@ import './App.css';
 //changed
 import Text from './Text.jsx';
 import Button from './Button.jsx';
+import Contador from './Contador.jsx';
 
 class App extends Component {
   render() {
@@ -24,8 +25,12 @@ class App extends Component {
             Learn React
           </a>
         </header>
-        <Text></Text>
+
+
+        <Text txt="veja o botao abaixo"></Text>
         <Button txt="Clique aqui"></Button>
+
+        <Contador></Contador>
       </div>
     );
   }

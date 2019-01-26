@@ -1,30 +1,20 @@
 import React from 'react';
 
 class Text extends React.Component {
-   render() {
-      return (
-         <div>
-            <Header/>
-            <Content/>
-         </div>
-      );
+   constructor(props) {
+      super(props);
+      this.state = { 
+         name: this.props.txt, 
+         class: `${this.props.class}`,
+         inverted: `${this.props.inverted}`,
+      };
    }
-}
-class Header extends React.Component {
+   
+   
    render() {
       return (
          <div>
-            <h1 className="text">Componente Header</h1>
-         </div>
-      );
-   }
-}
-class Content extends React.Component {
-   render() {
-      return (
-         <div>
-            <h2>Component Content</h2>
-            <p>The content text!!!</p>
+            <h1  v='1' className={this.props.className}>{this.state.name}{this.props.click}</h1>
          </div>
       );
    }

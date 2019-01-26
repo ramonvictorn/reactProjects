@@ -34,3 +34,22 @@
 .text {
   color:red;
 }
+
+.warn {
+  color: blue;;
+}
+
+.textFull {
+  color: blue;
+  font-size: 40px.
+}
+
+.flag1{
+  color: brown;
+  background: yellow;
+}
+
+.flag2{
+  color: tomato;
+  background-color: black;
+}
