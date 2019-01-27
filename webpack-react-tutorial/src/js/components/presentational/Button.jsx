@@ -6,7 +6,7 @@ class Button extends React.Component {
       super(props);
       this.state = { 
          click: this.props.click, 
-         name: this.props.txt, 
+         txt: this.props.txt, 
       };
       //this.props = 'n deu';
       //this.handleClick = props.onClick ? props.onClick.bind(this) : this.handleClick.bind(this);
@@ -18,13 +18,13 @@ class Button extends React.Component {
       //e.preventDefault();
       //this.setState({name:'Foi clicado'})
       //this.setState({click:this.state.click+1})
-      console.log('Clicado no Button', this.state, this.props);
+      console.log('Clicado no Button state->', this.state,'props ->',  this.props);
    }
 
    render() {
       return (
          <div>
-         <button onClick={() => this.handleClick()} className="text">{this.props.txt}-{this.props.click}</button>
+         <button onClick={() => this.handleClick()} className="text">{this.state.txt}-{this.props.click}</button>
          </div>
       );
    }
