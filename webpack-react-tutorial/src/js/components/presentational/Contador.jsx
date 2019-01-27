@@ -8,6 +8,7 @@ class Contador extends React.Component{
         this.state = { 
             click: 0, 
             inverted:false,
+            texto : 'clique aqui',
          };
         this.btClicked = this.btClicked.bind(this);
         this.toggleInverted = this.toggleInverted.bind(this);
@@ -27,13 +28,13 @@ class Contador extends React.Component{
         //    newClass = 'text';
         //}
         //this.setState({class:newClass})
-        console.log('Clicado aqui no contador',this.state);
+        console.log('Clicado no contador',this.state);
     }
     render(){
         return(
             <div>
-                <Text className={this.state.inverted ? 'flag1' : 'flag2'} txt="veja o botao abaixo aqui no contador" click={this.state.click}></Text>
-                <Button onClick={() => this.btClicked()} txt="Clique aqui"></Button>
+                <Text className={this.state.inverted ? 'flag1' : 'flag2'} txt="veja o botao abaixo aqui no contador " click={this.state.click}></Text>
+                <Button onClick={() => this.btClicked()} txt={this.state.texto} click={this.state.click}></Button>
             </div>
         );
     }
