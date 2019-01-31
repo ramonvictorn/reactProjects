@@ -6,35 +6,24 @@ class Contador extends React.Component{
     constructor(props){
         super(props);        
         this.state = { 
-            click: 0, 
+            qtdClicks: 0, 
             inverted:false,
-            texto : 'clique aqui',
          };
-        this.btClicked = this.btClicked.bind(this);
-        this.toggleInverted = this.toggleInverted.bind(this);
+        this.onClickHandler = this.onClickHandler.bind(this);
     }
-    
-    toggleInverted() {
-        this.setState({inverted: !this.state.inverted});
-      }
 
-    btClicked(){
-        this.toggleInverted()
-        this.setState({click:this.state.click+1})
-        //var newClass;
-        //if(this.state.class == 'text') {
-        //    newClass = 'warn' 
-        //}else{ 
-        //    newClass = 'text';
-        //}
-        //this.setState({class:newClass})
-        console.log('Clicado no contador',this.state);
+    onClickHandler(){
+        this.setState({
+            qtdClicks:this.state.qtdClicks+1,
+            inverted: !this.state.inverted
+        })
     }
     render(){
+        //console.log('Clicado no contador -> state',this.state);
         return(
             <div>
-                <Text className={this.state.inverted ? 'flag1' : 'flag2'} txt="veja o botao abaixo aqui no contador " click={this.state.click}></Text>
-                <Button onClick={() => this.btClicked()} txt={this.state.texto} click={this.state.click}></Button>
+                <Text className={this.state.inverted ? 'flag1' : 'flag2'} txt="veja o botao abaixo aqui no contador velho" click={this.state.qtdClicks}></Text>
+                <Button clickHandler={this.onClickHandler } txt='clique aqui' qtdClicks={this.state.qtdClicks}></Button>
             </div>
         );
     }
